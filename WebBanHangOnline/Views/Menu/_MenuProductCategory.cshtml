@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.EF.ProductCategory>
+
+@if (Model != null && Model.Any())
+{
+
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                @*@foreach (var item in Model)
+        {*@
+                <div class="col-md-4">
+                    <div class="banner_item align-items-center rounded" style="background-image: url(Uploads/images/tintuc/bannerr1.png)">
+                        <div class="banner_category">
+                            <h4>Trái cây tươi được bảo quản nghiêm ngặt</h4>
+                            @*<a href="@item.Alias">@item.Title</a>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="banner_item align-items-center rounded" style="background-image: url(Uploads/images/tintuc/bannerr3.jpg)">
+                        <div class="banner_category">
+                            <h4>Thực phẩm sạch với quy trình sản xuất kín</h4>
+                            @*<a href="@item.Alias">@item.Title</a>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="banner_item align-items-center rounded" style="background-image: url(Uploads/images/tintuc/bannerr2.jpg)">
+                        <div class="banner_category">
+                            <h4>Trái cây tươi nhập khẩu và trong nước</h4>
+                            @*<a href="@item.Alias">@item.Title</a>*@
+                        </div>
+                    </div>
+                </div>
+        <!--}-->
+            </div>
+        </div>
+    </div>
+}
