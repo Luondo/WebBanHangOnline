@@ -34,7 +34,6 @@ namespace WebBanHangOnline.Controllers
         }
         public ActionResult Partial_News_Home()
         {
-            //var items = db.News.Take(3).ToList();
             var items = db.News.Where(x => x.IsActive).Take(16).ToList();
             return PartialView(items);
         }

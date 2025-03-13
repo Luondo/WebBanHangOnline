@@ -181,9 +181,6 @@ namespace WebBanHangOnline.Controllers
                             db.Orders.Add(order);
                             db.SaveChanges();
 
-                            // Lưu thay đổi số lượng sản phẩm
-                            //db.SaveChanges();
-
                             // Commit transaction
                             transaction.Commit();
 
@@ -194,7 +191,7 @@ namespace WebBanHangOnline.Controllers
                             code = new { Success = true, Code = 1, msg = "Đặt hàng thành công!" };
                             return Json(code);
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             // Rollback transaction nếu có lỗi
                             transaction.Rollback();

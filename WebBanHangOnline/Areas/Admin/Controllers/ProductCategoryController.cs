@@ -33,7 +33,6 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
                 model.ModifiedDate = DateTime.Now;
                 if (string.IsNullOrEmpty(model.Alias))
                     model.Alias = WebBanHangOnline.Models.Common.Filter.FilterChar(model.Title);
-                //model.Alias = WebBanHangOnline.Models.Common.Filter.FilterChar(model.Title);
                 db.ProductCategories.Add(model);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -68,7 +67,6 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             var item = db.ProductCategories.Find(id);
             if (item != null)
             {
-                //var DeleteItem = db.Categories.Attach(item);
                 db.ProductCategories.Remove(item);
                 db.SaveChanges();
                 return Json(new { success = true });
