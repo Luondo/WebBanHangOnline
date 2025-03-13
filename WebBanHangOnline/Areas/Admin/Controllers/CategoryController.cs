@@ -76,7 +76,6 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             var item = db.Categories.Find(id);
             if (item != null)
             {
-                //var DeleteItem = db.Categories.Attach(item);
                 db.Categories.Remove(item);
                 db.SaveChanges();
                 return Json(new { success = true });

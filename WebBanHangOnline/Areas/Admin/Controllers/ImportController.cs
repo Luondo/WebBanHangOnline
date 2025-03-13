@@ -122,9 +122,6 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
 
                     return RedirectToAction("Index");
                 }
-                //db.ImportDetails.Add(model);
-                //db.SaveChanges();
-                //return RedirectToAction("Index");
             }
             ViewBag.Product = new SelectList(db.Products.ToList(), "Id", "Title");
             ViewBag.Import = new SelectList(db.Imports.ToList(), "Id", "CreatedBy");

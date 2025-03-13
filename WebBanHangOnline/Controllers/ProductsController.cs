@@ -17,10 +17,6 @@ namespace WebBanHangOnline.Controllers
         // GET: Products
         public ActionResult Index(int? page,string timKiem)
         {
-            //var items = db.Products.ToList();
-
-            ////var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Title).ToList();
-            //return View(items);
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
 
@@ -39,19 +35,6 @@ namespace WebBanHangOnline.Controllers
                 PagedList<Product> lst = new PagedList<Product>(sanphamTimKiem, pageNumber, pageSize);
                 return View(lst);
             }
-
-            //if (timKiem == null)
-            //{
-
-            //    var items = db.Products.ToList();
-            //    return View(items);
-            //}
-            //else
-            //{
-            //    var sanphamTimKiem = db.Products.AsNoTracking().Where(x => x.Title.Trim().ToUpper().Contains(timKiem.Trim().ToUpper())).OrderBy(x => x.Title);
-            //    return View(sanphamTimKiem);
-            //}
-
         }
 
         public ActionResult Detail(string alias,int id)
@@ -87,8 +70,6 @@ namespace WebBanHangOnline.Controllers
 
         public ActionResult Partial_ItemsByCateId(string timKiem)
         {
-            //var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Title).ToList();
-
             if (timKiem == null)
             {
 
@@ -101,8 +82,6 @@ namespace WebBanHangOnline.Controllers
                 return PartialView(sanphamTimKiem);
             }
 
-            //var items = db.Products.Where(x => x.IsHome && x.IsActive).AsNoTracking().OrderBy(x => x.Title).Take(16).ToList();
-            //return PartialView(items);
         }
 
         public ActionResult Partial_ProductSales()
